@@ -1,23 +1,10 @@
-### Ecommerce Template 👋
+# Cars Movie Toys eCommerce Website
 
-[Demo](https://samwitadhikary.github.io/Ecommerce/)
+Welcome to the Cars Movie Toys eCommerce website repository! This project is a fully responsive and dynamic website created using HTML and CSS. Firebase has been integrated to enhance the functionality of the site.
 
-## Working!
-- It is a pure Ecommerce Template made Purely in HTML and CSS with Full Responsive Mode. It has multipage functionality and awesome looks.
-- Want to get this source code. Do fork it. 
-- Have any more ideas, make a pull request.
+## Features:
 
-### Connect with me:
+- **Responsive Design:** The website is designed to provide a seamless experience across various devices, ensuring a user-friendly interface on desktops, tablets, and smartphones.
 
-[<img align="left" alt="samwitadhikary.github.io/my-profile" width="22px" src="https://raw.githubusercontent.com/iconic/open-iconic/master/svg/globe.svg" />][website]
-[<img align="left" alt="Samwit | Twitter" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/twitter.svg" />][twitter]
-[<img align="left" alt="Samwit | LinkedIn" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/linkedin.svg" />][linkedin]
-[<img align="left" alt="Samwit | Instagram" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/instagram.svg" />][instagram]
+- **Dynamic Content:** Leveraging Firebase, the website dynamically updates content, offering real-time changes to users.
 
-<br />
----
-
-[website]: https://samwitadhikary.github.io/my-profile
-[twitter]: https://twitter.com/SamwitAdhikary
-[instagram]: https://www.instagram.com/samwit_adhikary
-[linkedin]: https://www.linkedin.com/in/samwit-adhikary-2487161a3/
