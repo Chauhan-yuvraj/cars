@@ -25,15 +25,24 @@ nav ul{
 }
 nav ul li{
     display: inline-block;
+    
     margin-right: 20px;
 }
 a{
     text-decoration: none;
-    color: #555;
+    color: white;
 }
 p{
     color: #555;
 }
+
+
+/* hamara h yah */
+
+.logo_img{
+    width: 8rem;
+}
+
 .container{
     max-width: 1300px;
     margin: auto;
@@ -68,14 +77,21 @@ p{
     border-radius: 30px;
     transition: background 0.5s;
 }
+.btn2{
+    background-color: #1d1d1d;
+}
 .btn:hover{
     background: #563434;
 }
+.btn2:hover{
+    background-color: white;
+    color: black;
+}
 .header{
-    background: radial-gradient(#fff,#ffd6d6);
+    background: radial-gradient(#e1cccc,#ff7e1f);
 }
 .header .row{
-    margin-top: 70px;
+    margin-top: 0px;
 }
 .categories{
     margin: 70px 0;
@@ -85,9 +101,23 @@ p{
     min-width: 250px;
     margin-bottom: 30px;
 }
+.hudson{
+    position: relative;
+    bottom : 50px;
+    width: 200px;
+    transform: scale(1.1);
+}
+
 .col-3 img{
     width: 100%;
+    padding : 15px;
 }
+.col-3 img:hover{
+    transform: scale(1.3);
+    transition: all 0.20s ease-in-out;
+    filter: drop-shadow(20px 20px 2px black);
+}
+
 .small-container{
     max-width: 1080px;
     margin: auto;
@@ -96,6 +126,7 @@ p{
 }
 .col-4{
     flex-basis: 25%;
+    margin: px;
     padding: 10px;
     min-width: 200px;
     margin-bottom: 50px;
@@ -103,6 +134,7 @@ p{
 }
 .col-4 img{
     width: 100%;
+    height: 15rem;
 }
 .title{
     text-align: center;
@@ -134,10 +166,14 @@ h4{
 }
 .col-4:hover{
     transform: translateY(-5px);
+    box-shadow: 0.2px 0.2px 20px black;
+}
+.col-4 img:hover{
+    /* filter: drop-shadow(20px 20px 20px black); */
 }
 /* Offer */
 .offer{
-    background: radial-gradient(#fff, #ffd6d6);
+    background: radial-gradient(#fff, #8ff6fa);
     margin-top: 80px;
     padding: 30px 0;
 }
@@ -251,6 +287,8 @@ ul{
     width: 28px;
     margin-left: 20px;
     display: none;
+    color: white;
+
 }
 
 /* All Products */
@@ -383,7 +421,7 @@ th:last-child{
 /* Account page */
 .account-page{
     padding: 50px 0;
-    background: radial-gradient(#fff, #ffd6d6);
+    background: radial-gradient(#fff, #9199be);
 }
 .form-container{
     background: #fff;
