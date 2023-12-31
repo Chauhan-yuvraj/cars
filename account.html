@@ -42,21 +42,21 @@
                     <div class="form-container">
                         <div class="form-btn">
                             <span onclick="login()">Login</span>
-                            <span onclick="register()">Register</span>
+                            <span onclick="register()"> Register</span>
                             <hr id="Indicator">
                         </div>
                         <form id="LoginForm">
-                            <input type="text" placeholder="Username">
-                            <input type="password" placeholder="Password">
-                            <button type="submit" class="btn">Login</button>
-                            <a href="">Forget Password</a>
+                            <input type="text" id="user" placeholder="Username">
+                            <input type="password" id="pass" placeholder="Password">
+                            <button type="submit" id="login" class="btn">Login</button>
+                            <!-- <a href="">Forget Password</a> -->
                         </form>
 
                         <form id="RegForm">
-                            <input type="text" placeholder="Username">
-                            <input type="email" placeholder="Email">
-                            <input type="password" placeholder="Password">
-                            <button type="submit" class="btn">Register</button>
+                            <input type="text"  placeholder="Username" id="username">
+                            <input type="email" placeholder="Email" id="email">
+                            <input type="password" placeholder="Password" id="password">
+                            <button type="submit" class="btn" id="regbtn">Register</button>
                         </form>
                     </div>
                 </div>
@@ -140,6 +140,76 @@
         }
     </script>
 
+    <!-- fireBase script  -->
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
+        import { getDatabase , set , ref } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-database.js";
+        import { getAuth ,  createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js";
+        import { getAuth ,  signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-analytics.js";
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+      
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        const firebaseConfig = {
+          apiKey: "AIzaSyBMV1DIObK21cf2ueZc-hsprZ37Mav6WJM",
+          authDomain: "rust-eze.firebaseapp.com",
+          projectId: "rust-eze",
+          storageBucket: "rust-eze.appspot.com",
+          messagingSenderId: "130717530607",
+          appId: "1:130717530607:web:2d9c0f6ff9de67bf5d5e1a",
+          measurementId: "G-VG8G02H8W0"
+        };
+      
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const analytics = getAnalytics(app);
+        const db = getDatabase();
+        const auth = getAuth();
+        const dbref = ref(db);
+
+        let username =  document.getElementById('username');
+        let email = document.getElementById('email');
+        let password = document.getElementById('password')
+        let registertBtn = document.getElementById('regbtn')
+        let MainForm = document.getElementById('RegForm')
+        let LoginForm = document.getElementById('LoginForm')
+        let lpassword = document.getElementById('pass')
+        let user = document.getElementById('user')
+
+    let RegisterUser = evt => {
+        evt.preventDefault();
+
+        createUserWithEmailAndPassword(auth , email.value , password.value , username.value)
+        .then((credentials)=>{
+            console.log(credentials);
+        })
+        .catch((error)=>{
+            alert(error.message);
+            console.log(error.code);
+            console.log(error.message);
+        })
+    }
+    MainForm.addEventListener('submit', RegisterUser);
+
+    let SignInUser = evt =>{
+        evt.preventDefault();
+
+        signInWithEmailAndPassword(auth , user.value , pass.value )
+        .then((credentials)=>{
+            console.log(credentials);
+        })
+        .catch((error)=>{
+            alert(error.message);
+            console.log(error.code);
+            console.log(error.message);
+        })
+    }
+    LoginForm.addEventListener('submit' , SignInUser);
+
+    </script>
 </body>
 
 </html>
